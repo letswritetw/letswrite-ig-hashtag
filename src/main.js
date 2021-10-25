@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
+    console.log('getLoginStatus', response)
+    statusChangeCallback(response);
   });
 
 })
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.checkLoginState = () => {
   FB.getLoginStatus(function(response) {
+    console.log('checkLoginState', response)
     statusChangeCallback(response);
   });
 }
